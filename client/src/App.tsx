@@ -6,10 +6,12 @@ import SignIn from "@src/pages/SignIn";
 import SignUp from "@src/pages/SignUp";
 import Projects from "@src/pages/Projects";
 import NotFound from "@src/pages/NotFound";
+import Header from "@src/components/Header";
 
 function App() {
   return (
     <BrowserRouter>
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

@@ -1,6 +1,19 @@
 import express from "express";
+import mongoose from "mongoose";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const PORT = 3000;
+
+mongoose
+  .connect(process.env.MONGODB_CONNECT)
+  .then(() => {
+    console.log("MongoDB is connected");
+  })
+  .catch((err) => {
+    console.error("Error", err);
+  });
 
 const app = express();
 
